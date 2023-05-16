@@ -1,0 +1,20 @@
+<img class="route-link"
+  src="./assets/Tools/Databank.jpg"
+  routerLink="databank">
+
+<img class="route-link"
+  src="./assets/Tools/TacticalGuide.jpg"
+  routerLink="tacticalGuide">
+
+<div>
+  <label>
+    Search Entry ID
+    <input class="next-id-input"
+      type="number"
+      placeholder=""
+      min="0"
+      max="496"
+      [(ngModel)]="nextEntryID"
+      (keyup.enter)="routeToNewEntry()">
+  </label>
+</div>

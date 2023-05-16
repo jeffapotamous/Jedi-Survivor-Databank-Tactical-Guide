@@ -1,0 +1,21 @@
+<img class="back-button"
+  src="./assets/Tools/back.png"
+  routerLink="">
+
+<div *ngFor="let category of categories"
+  class="databank-category"
+  (click)="setCurrentlySelectedRoute(category)">
+  <img src="./assets/TacticalGuide/Menu/{{category.code}}{{currentlySelectedCategory?.code === category.code ? '_Selected' : ''}}.jpg"
+    class="category-image">
+  <span class="category-range-numbers">
+    {{category.startID}} - {{category.endID}}
+  </span>
+</div>
+
+<app-group #tacticalGuideGroup
+  *ngIf="currentlySelectedCategory"
+  [startID]="currentlySelectedCategory.startID"
+  [endID]="currentlySelectedCategory.endID"
+  [path]="'TacticalGuide'"
+  (outOfRangeEmitter)="findNewCategory($event)">
+</app-group>

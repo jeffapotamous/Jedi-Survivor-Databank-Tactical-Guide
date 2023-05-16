@@ -1,0 +1,21 @@
+<img class="back-button"
+  src="./assets/Tools/back.png"
+  routerLink="">
+
+<div *ngFor="let category of categories"
+  class="databank-category"
+  (click)="setCurrentlySelectedRoute(category)">
+  <img src="./assets/Databank/Menu/{{category.image}}{{currentlySelectedCategory?.link === category.link ? '_Selected' : ''}}.jpg"
+    class="category-image">
+  <span class="category-range-numbers">
+    {{category.startID}} - {{category.endID}}
+  </span>
+</div>
+
+<app-group #databankGroup
+  *ngIf="currentlySelectedCategory"
+  [startID]="currentlySelectedCategory.startID"
+  [endID]="currentlySelectedCategory.endID"
+  [path]="'Databank'"
+  (outOfRangeEmitter)="findNewCategory($event)">
+</app-group>

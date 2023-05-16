@@ -1,0 +1,16 @@
+<div id="group-container">
+  <app-entry [entryID]="currentlySelectedID"
+    [path]="path">
+  </app-entry>
+  <img *ngIf="currentlySelectedID > 0"
+    class="nav-button"
+    id="prev-button"
+    src="./assets/Tools/left.png"
+    (click)="back()">
+
+  <img *ngIf="currentlySelectedID < 496"
+    class="nav-button"
+    id="next-button"
+    src="./assets/Tools/right.png"
+    (click)="next()">
+</div>

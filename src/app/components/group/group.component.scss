@@ -1,0 +1,25 @@
+#group-container {
+  position: relative;
+}
+
+.nav-button {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  width: 64px;
+  transform: translate(0, -50%);
+  opacity: 0.15;
+  transition: 200ms linear all;
+  
+  &:hover {
+    opacity: 1;
+  };
+}
+
+#next-button {
+  right: 0;
+}
+
+#prev-button {
+  left: 0;
+}

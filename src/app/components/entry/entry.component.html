@@ -1,0 +1,18 @@
+<ng-container *ngIf="routeFromHome">
+  <img class="back-button"
+    src="./assets/Tools/back.png"
+    routerLink="">
+
+  <label>
+    Search Entry ID
+    <input class="next-id-input"
+      type="number"
+      min="0"
+      max="496"
+      [(ngModel)]="nextEntryID"
+      (ngModelChange)="routeToNewEntry()">
+  </label>
+</ng-container>
+
+<img class="entry-image"
+  src="assets/{{path}}/{{entryID | number:'3.0-0'}}.jpg">

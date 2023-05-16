@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #050d10;
+  color: #d7d7d7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css?family=Montserrat:100') format('truetype');
+}
+
+.back-button {
+  display: block;
+  cursor: pointer;
+  width: 100px;
+}
+
+/* ----- Category ----- */
+.databank-category {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / 11);
+  cursor: pointer;
+}
+
+.category-image {
+  width: 100%;
+}
+
+.category-range-numbers {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
